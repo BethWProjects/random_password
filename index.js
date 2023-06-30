@@ -31,12 +31,10 @@ function setLightDarkMode() {
     let heading = document.querySelector('h2');
     heading.classList.toggle('light-mode-description');
     if (toggleDark === true) {
-        themeSwitch.textContent = "Dark Mode";
-        themeSwitch.style.color = "#1F2937";
+        themeSwitch.textContent = "🌙";
         toggleDark = false;
     } else {
-        themeSwitch.textContent = "Light Mode";
-        themeSwitch.style.color = 'white';
+        themeSwitch.textContent = "☀️";
         toggleDark = true;
     }
 }
