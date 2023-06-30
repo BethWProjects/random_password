@@ -60,9 +60,21 @@ function copyText(element) {
         document.body.removeChild(textarea);
       
         // Provide visual feedback to the user
-        element.textContent = "Copied!";
-        setTimeout(function() {
-          generatePassword();
-        }, 2000); // Reset the text after 2 seconds
+        if (textToCopy !== "") {
+            element.textContent = "Copied!";
+            setTimeout(function() {
+              generatePassword();
+            }, 2500); // Reset the text after 2 seconds
+        }
       }
 
+//Hover state on password <p> elements only when text is showing, created separate class attribute in HTML and CSS for the element to apply the "this" keyword to the function, to access the element.
+//showHover is a boolean value, if the text is showing, then showHover is true, if not, then it is false.
+  
+  function toggleHoverState(element, showHover) {
+    if (showHover && element.textContent.trim() !== '') {
+      element.classList.add('hover');
+    } else {
+      element.classList.remove('hover');
+    }
+  }

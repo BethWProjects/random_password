@@ -13,8 +13,8 @@
             <h2>Never use an insecure password again.</h2>
             <button id="btn-generate" onclick="generatePassword()">Generate Passords</button>
             <div id="passwords-div">
-                <p class="password-one" onclick="copyText(this)"></p>
-                <p class="password-two" onclick="copyText(this)"></p>
+                <p class="password-one hoverable-paragraph" onclick="copyText(this)" onmouseover="toggleHoverState(this, true)" onmouseout="toggleHoverState(this, false)"></p>
+                <p class="password-two hoverable-paragraph" onclick="copyText(this)" onmouseover="toggleHoverState(this, true)" onmouseout="toggleHoverState(this, false)"></p>
             </div>
         </div>
         <script src="index.js"></script>

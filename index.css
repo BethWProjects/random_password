@@ -105,6 +105,13 @@ h2 {
     margin-top: 70px;
 }
 
+.hoverable-paragraph.hover {
+    cursor: pointer;
+    box-shadow: inset 211px 0 0 0 #0284C7;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+  
+
 @media screen and (max-width: 480px) {
     #main {
         margin: 185px 20px;
