@@ -7,11 +7,7 @@ let toggleDark = true;
 
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
-
-// for (let i = 0; i < characters.length; i++) { 
-//     console.log(characters[i]);
-// }
-
+//generate Password
 function generatePassword() {
     let clearPassword = passwordElOne.textContent = "";
     let clearPassword2 = passwordElTwo.textContent = "";
@@ -28,6 +24,7 @@ function generatePassword() {
 }
 }
 
+//Light/Dark Mode toggle
 function setLightDarkMode() {
     let body = document.body;
     body.classList.toggle('light-mode');
@@ -43,3 +40,29 @@ function setLightDarkMode() {
         toggleDark = true;
     }
 }
+
+//Copy to Clipboard
+function copyText(element) { 
+        var textToCopy = element.textContent;
+      
+        // Create a temporary textarea element
+        var textarea = document.createElement('textarea');
+        textarea.value = textToCopy;
+      
+        // Append the textarea to the DOM
+        document.body.appendChild(textarea);
+      
+        // Copy the text from the textarea
+        textarea.select();
+        document.execCommand('copy');
+      
+        // Remove the temporary textarea
+        document.body.removeChild(textarea);
+      
+        // Provide visual feedback to the user
+        element.textContent = "Copied!";
+        setTimeout(function() {
+          generatePassword();
+        }, 2000); // Reset the text after 2 seconds
+      }
+
