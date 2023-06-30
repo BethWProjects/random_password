@@ -47,12 +47,16 @@ h2 {
     font-weight: 500;
 }
 
+#btn-generate:hover {
+    cursor: pointer;
+}
+
 #passwords-div {
     display: flex;
     align-items: center;
 }
 
-.passwords {
+.password-one, .password-two  {
     display: flex;
     justify-content: center;
     align-items: center;
