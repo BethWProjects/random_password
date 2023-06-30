@@ -4,6 +4,28 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.light-mode {
+    background-color: #ECFDF5;
+    color: #000;
+  }
+
+.light-mode-description {
+    color: #374151;
+}
+
+#theme-switch {
+    margin: 0px 0px 0px auto;
+    padding: 9px 17px 9px 15px;
+    border-radius: 6px;
+    border: none;
+    background: #10B981;
+    color: var(--white, #FFF);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 #main {
@@ -11,7 +33,7 @@ body {
 }
 
 h1 {
-    color: #FFF;
+    /* color: #FFF; */
     font-size: 40px;
     font-family: 'Karla', sans-serif;
     max-width: 354px;
