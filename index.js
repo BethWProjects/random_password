@@ -8,9 +8,9 @@ let toggleDark = true;
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
-for (let i = 0; i < characters.length; i++) { 
-    console.log(characters[i]);
-}
+// for (let i = 0; i < characters.length; i++) { 
+//     console.log(characters[i]);
+// }
 
 function generatePassword() {
     let clearPassword = passwordElOne.textContent = "";
@@ -21,7 +21,6 @@ function generatePassword() {
         let password2 = Math.floor(Math.random() * characters.length);
         passwordElOne.textContent += characters[password1];
         passwordElTwo.textContent += characters[password2];
-        console.log(password1);
     }
     return passwordElOne.textContent && passwordElTwo.textContent;
 } else if (passwordElOne && passwordElTwo) {
@@ -36,9 +35,11 @@ function setLightDarkMode() {
     heading.classList.toggle('light-mode-description');
     if (toggleDark === true) {
         themeSwitch.textContent = "Dark Mode";
+        themeSwitch.style.color = "#1F2937";
         toggleDark = false;
     } else {
         themeSwitch.textContent = "Light Mode";
+        themeSwitch.style.color = 'white';
         toggleDark = true;
     }
 }

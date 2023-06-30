@@ -16,6 +16,10 @@ body {
     color: #374151;
 }
 
+.light-mode-toggle {
+    color: #000;
+}
+
 #theme-switch {
     margin: 0px 0px 0px auto;
     padding: 9px 17px 9px 15px;
@@ -26,6 +30,10 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 500;
+}
+
+#theme-switch:hover {
+    cursor: pointer;
 }
 
 #main {
@@ -71,6 +79,8 @@ h2 {
 
 #btn-generate:hover {
     cursor: pointer;
+    box-shadow: inset 177px 0 0 0 #38BDF8;
+    transition: color .4s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 #passwords-div {
